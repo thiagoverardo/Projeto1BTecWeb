@@ -15,10 +15,14 @@ import java.util.*;
 
 public class DAO {
 	private Connection connection = null;
+	
+	String url = System.getenv("mysql_url");
+	String user = System.getenv("mysql_user");
+	String password = System.getenv("mysql_password");
 
 	public DAO() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		connection = DriverManager.getConnection("jdbc:mysql://localhost/teste", "root", "Padrinhos123");
+		connection = DriverManager.getConnection(url, user, password);
 	}
 
 	public boolean verifica(Cadastro pessoa) throws SQLException {
