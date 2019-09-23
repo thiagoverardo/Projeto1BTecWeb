@@ -1,0 +1,45 @@
+Database:
+
+	CREATE DATABASE teste;
+
+Tabela Cadastro:
+
+	CREATE TABLE Cadastro(
+ 	id INT NOT NULL AUTO_INCREMENT,
+ 	user VARCHAR(32) NOT NULL,
+ 	password VARCHAR(32) NOT NULL,
+ 	PRIMARY KEY (ID)
+	);
+
+	DESCRIBE cadastro;
+	+----------+-------------+------+-----+---------+----------------+
+	| Field    | Type        | Null | Key | Default | Extra          |
+	+----------+-------------+------+-----+---------+----------------+
+	| id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+	| user     | varchar(32) | NO   |     | NULL    |                |
+	| password | varchar(32) | NO   |     | NULL    |                |
+	+----------+-------------+------+-----+---------+----------------+
+
+Tabela Jogos:
+	
+	CREATE TABLE Cadastro(
+ 	id INT NOT NULL AUTO_INCREMENT,
+ 	user VARCHAR(32) NOT NULL,
+ 	jogo VARCHAR(32) NOT NULL,
+	genero VARCHAR(32) NOT NULL,
+	preco DECIMAL(7,2) NOT NULL,
+	compra DATE, 
+ 	PRIMARY KEY (ID)
+	);
+
+	DESCRIBE jogos;
+	+--------+--------------+------+-----+---------+----------------+
+	| Field  | Type         | Null | Key | Default | Extra          |
+	+--------+--------------+------+-----+---------+----------------+
+	| id     | int(11)      | NO   | PRI | NULL    | auto_increment |
+	| user   | varchar(32)  | NO   |     | NULL    |                |
+	| jogo   | varchar(32)  | NO   |     | NULL    |                |
+	| genero | varchar(32)  | NO   |     | NULL    |                |
+	| preco  | decimal(7,2) | NO   |     | NULL    |                |
+	| compra | date         | YES  |     | NULL    |                |
+	+--------+--------------+------+-----+---------+----------------+
